@@ -37,7 +37,7 @@ Method %OnExecute() As %Status [ PublicList = tmp ]
 		if $isobject(..%filterValues) {
 			set tDatabase=..%filterValues.Database	
 		} else {
-			set tDatabase=$zu(12)	
+			set tDatabase=##class(%File).ManagerDirectory()	
 		}
 		set tShowAll=(+..%filterValues.Top=0)
 		set tNoShowUsedSize=1
